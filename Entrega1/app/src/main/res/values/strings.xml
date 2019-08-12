@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Piedra papel o tijera</string>
+    <string name="resultado">Jugada</string>
+    <string name="jugador">Jugador</string>
+    <string name="COM">COM</string>
+    <string name="cero">0</string>
+    <string name="botonHistorial">Ver historial</string>
+    <string name="victoria">Victoria</string>
+    <string name="derrota">Derrota</string>
+
+</resources>

@@ -1,0 +1,194 @@
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ImagenButton combina opciones de wiglet Button e ImageView. Es ideal para esta entrega -->
+
+    <ImageButton
+        style="@style/botones"
+        android:id="@+id/ib_piedra"
+        android:src="@drawable/piedra"
+        android:background="@color/fondoBotones"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        style="@style/botones"
+        android:id="@+id/ib_papel"
+        android:src="@drawable/papel"
+        android:background="@color/fondoBotones"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        style="@style/botones"
+        android:id="@+id/ib_tijera"
+        android:src="@drawable/tijera"
+        android:background="@color/fondoBotones"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/r_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cero"
+        android:textSize="50dp"
+        android:textColor="@color/colorFuente"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/r_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cero"
+        android:textSize="50dp"
+        android:textColor="@color/colorFuente"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:id="@+id/nom_jugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jugador"
+        android:textSize="25dp"
+        android:textColor="@color/colorFuente"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/nom_COM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/COM"
+        android:textSize="25dp"
+        android:textColor="@color/colorFuente"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"/>
+
+    <ImageView
+        style="@style/imagenPPT"
+        android:id="@+id/i_player"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/piedra"/>
+
+    <ImageView
+        style="@style/imagenPPT"
+        android:id="@+id/i_com"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/piedra"/>
+
+    <ImageView
+        android:id="@+id/i_res"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/empate"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/b_historial"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/botonHistorial"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/colorBotonHistorial"
+        android:onClick="alHistorial"/>
+
+    <!-- Linears para indicar el resultado de la partida -->
+
+    <LinearLayout
+        android:id="@+id/linearVictoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/victoria"
+        android:layout_above="@id/b_historial">
+
+        <TextView
+            style="@style/resultado"
+            android:id="@+id/resultadoVictoria"
+            android:text="@string/victoria"
+            android:textColor="@color/colorFuente"
+            android:textAlignment="center"
+            android:layout_above="@id/ib_tijera"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDerrota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fondoBotones"
+        android:layout_above="@id/b_historial">
+
+        <TextView
+            style="@style/resultado"
+            android:id="@+id/resultadoDerrota"
+            android:text="@string/derrota"
+            android:textColor="@color/colorFuente"
+            android:textAlignment="center"
+            android:layout_above="@id/ib_tijera"/>
+
+    </LinearLayout>
+
+    <!-- Linears anidados de la barra transparente del contador de partida y botón reinicio -->
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorTransparente"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/t_partida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resultado"
+            android:textSize="25dp"
+            android:textColor="@color/colorFuenteBlanco"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/cero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cero"
+            android:textSize="25dp"
+            android:textColor="@color/colorFuenteBlanco"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="115dp" />
+    </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_reinicio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/reiniciar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"/>
+
+</RelativeLayout>

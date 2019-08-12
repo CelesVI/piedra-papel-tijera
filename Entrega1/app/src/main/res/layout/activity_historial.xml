@@ -1,0 +1,57 @@
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <!-- ScrollView para una mejor visualización de los resultados de las partidas. -->
+
+    <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/background"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:id="@+id/linearVictoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/victoria">
+
+            <TextView
+                style="@style/resultado"
+                android:id="@+id/h_resultadoVictoria"
+                android:text="@string/victoria"
+                android:textColor="@color/colorFuente"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDerrota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fondoBotones">
+
+            <TextView
+                style="@style/resultado"
+                android:id="@+id/h_resultadoDerrota"
+                android:text="@string/derrota"
+                android:textColor="@color/colorFuente"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoPartidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textColor="@color/colorFuente"/>
+
+    </RelativeLayout>
+
+</ScrollView>
